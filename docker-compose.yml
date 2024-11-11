@@ -1,0 +1,32 @@
+version: "3"
+services:
+  envoy_server:
+    image: envoyproxy/envoy:dev-fcdc9d6d5a9da98fe30ad749201034770ff6b30e
+    volumes:
+      - ./envoy.yaml:/etc/envoy/envoy.yaml
+      - ./../extproc/ssl_creds:/etc/ssl_creds
+    entrypoint: "/usr/local/bin/envoy"
+    command:
+      - "--service-node mock"
+      - "--service-cluster mock"
+      - "--config-path /etc/envoy/envoy.yaml"
+      - "--concurrency 1"
+      - "--mode serve"
+      - "--log-level debug"
+    networks:
+      envoymesh:
+    expose:
+       - "8888"
+    ports:
+       - "9000:9000"
+       - "8888:8888"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  nginx:
+    hostname: "nginx_test"
+    restart: always
+    image: nginx:1-alpine
+    networks:
+      envoymesh:
+networks:
+  envoymesh:

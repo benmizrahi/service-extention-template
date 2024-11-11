@@ -1,0 +1,10 @@
+.venv/
+dist
+front/node_modules
+protodef/* 
+!protodef/setup.py
+**/__pycache__
+extproc/ssl_creds
+iac/.terraform
+iac/.terraform*
+iac/terraform*

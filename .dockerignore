@@ -1,0 +1,7 @@
+**/*.pyc
+**/.pytest_cache
+.env/
+dist
+front/node_modules
+protodef/* 
+!protodef/setup.py
