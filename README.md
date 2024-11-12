@@ -1,11 +1,10 @@
 ## Building Callout Service for GCP Load Balancer
 
-
 Service Extensions enables the users of Google Cloud products, such as Cloud Load Balancing and Media CDN, to insert programmability directly into the data path. This helps you customize the behavior of these proxies to meet your business needs. This page provides a high-level overview about Service Extensions.
 
-Original GCP implemetation: https://github.com/GoogleCloudPlatform/service-extensions.git   
+Original GCP implementation: https://github.com/GoogleCloudPlatform/service-extensions.git   
 
-Callout Servie Externations docs: https://cloud.google.com/service-extensions/docs/overview   
+Callout Service Extensions docs: https://cloud.google.com/service-extensions/docs/overview   
 
 
 ---
