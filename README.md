@@ -26,7 +26,7 @@ npm install @bufbuild/buf -g
 Using buf to generate proto to python files and use them as a package:
 
 ```
-buf -v generate   https://github.com/envoyproxy/envoy.git#subdir=api   --path envoy/service/ext_proc/v3/external_processor.proto   --include-imports`
+buf -v generate https://github.com/envoyproxy/envoy.git#subdir=api   --path envoy/service/ext_proc/v3/external_processor.proto   --include-imports`
 
 # Install the package via setup.py
 pip install protodef/ 
@@ -47,9 +47,9 @@ Running the service locally:
 python3 -m callout.callout_server
 ```
 
-Running the extensions:
+Ports & Endpoints:
 
-   -  Health Checks: http://localhost:81/   
+   -  health checks: http://localhost:81/   
    -  gRPC endpoint: http://localhost:80/  
    -  gRPC endpoint (TLS): http://localhost:443/
 
@@ -57,12 +57,8 @@ Running the extensions:
 
 Local Testing with envoy server
 
-** please verify that you dowloaded the SSL certificate before running the docker compose. 
-
 `docker compose up`
 
-run the local service via VSCode debugger
-
-local server check (depends on the logic you should see headers/body outputs)
+Run the local service via VSCode debugger - to check local server (depends on the logic you should see headers/body outputs):
 
 `curl -I -v http://localhost:8888`
