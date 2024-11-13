@@ -29,7 +29,6 @@ buf -v generate https://github.com/envoyproxy/envoy.git#subdir=api   --path envo
 
 # Install the package via setup.py
 pip install protodef/ 
-
 ```
 
 Download the SSL Certificate:
